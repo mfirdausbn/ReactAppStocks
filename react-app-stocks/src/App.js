@@ -1,14 +1,8 @@
-
-import './App.css';
+import "./App.css";
+import Dashboard from "./components/Dashboard";
 
 function App() {
-  return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;

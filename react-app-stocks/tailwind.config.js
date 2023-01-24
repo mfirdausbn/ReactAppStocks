@@ -13,6 +13,11 @@ module.exports = {
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
       },
+      gridTemplateRows: {
+        7: "repeat(7, minmax(0,1fr))",
+        8: "repeat(8, minmax(0,1fr))",
+      }
+      //standard tailwind css only have 6 rows, doing this helps extend it to have 7 or 8 rows
     },
   },
   plugins: [],
