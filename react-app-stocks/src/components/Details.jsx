@@ -7,7 +7,6 @@ const Details = ({details}) => {
     name: "Name",
     country: "Country",
     currency: "Currency",
-    
     ipo: "IPO Date",
     marketCapitalization: "Market Capitalization",
     
