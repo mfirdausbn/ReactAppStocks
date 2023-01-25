@@ -25,6 +25,7 @@ const Chart = () => {
   const ctx = useContext(StockContext);
 
   //formatdata to pass into recharts
+  //refer to finnhub documentation for the response attributes
   //toFixed to return it to set decimal places in parenthesis
   const formatData = (data) => {
     return data.c.map((item, index) => {
@@ -107,7 +108,7 @@ const Chart = () => {
             fill="url(#chartColor)"
           />
           <Tooltip />
-          <XAxis datakey={"date"} />
+          <XAxis dataKey={"date"}/>
           <YAxis domain={["dataMin", "dataMax"]} />
         </AreaChart>
       </ResponsiveContainer>
