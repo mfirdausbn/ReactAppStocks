@@ -19,6 +19,7 @@ const Dashboard = () => {
       try {
         const result = await fetchStockDetails(ctx.stockSymbol);
         setStockDetails(result);
+        console.log(result);
       } catch (error) {
         setStockDetails({});
         console.log(error);
@@ -28,6 +29,7 @@ const Dashboard = () => {
       try {
         const result = await fetchQuote(ctx.stockSymbol);
         setQuote(result);
+        console.log(result);
       } catch (error) {
         setQuote({});
         console.log(error);

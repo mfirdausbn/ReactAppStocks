@@ -9,12 +9,6 @@ const Search = () => {
   //the array of objects that store the search results
   const [searchResults, setSearchResults] = useState([]);
 
-  //function to fetchData using the api
-  //   const fetchSearchResults = async (url) => {
-  //     const response = await fetch(url);
-  //     const data = await response.json();
-  //     setSearchResults(data);
-  //   };
 
   const clear = () => {
     setInput("");
@@ -27,6 +21,7 @@ const Search = () => {
         const searchResult = await searchSymbols(input);
         const result = searchResult.result;
         setSearchResults(result);
+        console.log(result);
       }
     } catch (error) {
       setSearchResults([]);
