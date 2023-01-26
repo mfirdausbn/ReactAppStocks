@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import SearchArea from "./SearchArea";
-import Details from "./Details";
-import Overview from "./Overview";
+import SearchArea from "../components/SearchArea";
+import Details from "../components/Details";
+import Overview from "../components/Overview";
 
 import StockContext from "../context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../api/api-functions";
-import Chart from "./Chart";
-import NavBar from "./NavBar";
+import Chart from "../components/Chart";
+import NavBar from "../components/NavBar";
 
-const Dashboard = () => {
+const HomePage = () => {
   const ctx = useContext(StockContext);
 
   const [stockDetails, setStockDetails] = useState({});
@@ -69,4 +69,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default HomePage;

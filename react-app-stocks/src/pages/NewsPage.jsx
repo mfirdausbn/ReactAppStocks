@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import StockContext from "../context/StockContext";
 
-const News = () => {
+const NewsPage = () => {
   const ctx = useContext(StockContext);
   const [news, setNews] = useState([]);
   const randomNewsOne = Math.floor(Math.random()*50);
@@ -53,7 +53,7 @@ const News = () => {
     <div className="h-screen grid grid-cols-2 grid-rows-8 bg-blue-200  ">
       {news.length > 0 ? (
         <>
-          <div className="row-span-2 col-span-2 bg-blue-400 overflow-y-scroll">
+          <div className="row-span-2 col-span-2 bg-blue-400 ">
             {news[randomNewsOne].headline}
             <br />
             <br />
@@ -96,4 +96,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default NewsPage;
