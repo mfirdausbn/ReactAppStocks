@@ -52,3 +52,19 @@ export const fetchHistoricalData = async (
 
   return await response.json();
 };
+
+
+// UNABLE TO USE THIS API
+// export const fetchCompanyNews = async (stockSymbol) => {
+//   const url = `${basePath}/company-news?symbol=${stockSymbol}&from=2021-09-01&to=2021-09-09&token=cf7ushiad3i8qmbtg260cf7ushiad3i8qmbtg26g`;
+
+//   const response = await fetch(url);
+
+//   if (!response.ok) {
+//     const message = `An error has occured: ${response.status}`;
+//     throw new Error(message);
+//   }
+
+//   return await response.json();
+// };
+

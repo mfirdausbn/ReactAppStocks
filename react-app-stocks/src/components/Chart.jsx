@@ -15,7 +15,7 @@ import {
 } from "../helpers/date-helper";
 import Card from "./Card";
 import ChartFilter from "./ChartFilter";
-import { fetchHistoricalData } from "../api/stock-api";
+import { fetchHistoricalData } from "../api/api-functions";
 import StockContext from "../context/StockContext";
 import { useContext } from "react";
 
@@ -108,7 +108,7 @@ const Chart = () => {
             fill="url(#chartColor)"
           />
           <Tooltip />
-          <XAxis dataKey={"date"}/>
+          <XAxis dataKey={"date"} />
           <YAxis domain={["dataMin", "dataMax"]} />
         </AreaChart>
       </ResponsiveContainer>

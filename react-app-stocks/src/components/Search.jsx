@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import SearchResults from "./SearchResults";
-// import { fetchQuote } from "../api/stock-api";
-import { searchSymbols } from "../api/stock-api";
+import { searchSymbols } from "../api/api-functions";
 
 const Search = () => {
   //input to store query input to search for stock data
   const [input, setInput] = useState("");
   //the array of objects that store the search results
   const [searchResults, setSearchResults] = useState([]);
-
 
   const clear = () => {
     setInput("");

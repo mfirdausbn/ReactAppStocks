@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Card from "./Card";
 import SearchArea from "./SearchArea";
 import Details from "./Details";
 import Overview from "./Overview";
 
 import StockContext from "../context/StockContext";
-import { fetchQuote, fetchStockDetails } from "../api/stock-api";
+import { fetchQuote, fetchStockDetails } from "../api/api-functions";
 import Chart from "./Chart";
 import NavBar from "./NavBar";
 
@@ -64,7 +63,7 @@ const Dashboard = () => {
         />
       </div>
       <div className="row-span-4 col-span-2 bg-white">
-        <Chart className="bg-white"/>
+        <Chart className="bg-white" />
       </div>
     </div>
   );

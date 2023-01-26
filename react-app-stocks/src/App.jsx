@@ -10,7 +10,7 @@ import ChartPage from "./pages/ChartPage";
 
 
 function App() {
-  const [stockSymbol, setStockSymbol] = useState("META");
+  const [stockSymbol, setStockSymbol] = useState("AAPL");
   return (
     <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
       <NavBar/>
