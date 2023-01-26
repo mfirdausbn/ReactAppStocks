@@ -1,9 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import StockContext from "../context/StockContext";
 
 const News = () => {
   const ctx = useContext(StockContext);
   const [news, setNews] = useState([]);
+  const randomNewsOne = Math.floor(Math.random()*50);
+  const randomNewsTwo = Math.floor(Math.random()*50);
+  const randomNewsThree = Math.floor(Math.random()*50);
+  const randomNewsFour = Math.floor(Math.random()*50);
 
   const fetchMarketNews = async () => {
     const res = await fetch(
@@ -48,31 +53,41 @@ const News = () => {
     <div className="h-screen grid grid-cols-2 grid-rows-8 bg-blue-200  ">
       {news.length > 0 ? (
         <>
-          <div className="row-span-2 col-span-2 bg-blue-400">
-            {news[3].headline}
+          <div className="row-span-2 col-span-2 bg-blue-400 overflow-y-scroll">
+            {news[randomNewsOne].headline}
             <br />
             <br />
-            {news[3].summary}
+            {news[randomNewsOne].summary}
+            <br/>
+            <br/>
+            <a href={news[randomNewsOne].url}>{news[randomNewsOne].url}</a>
           </div>
           <div className="row-span-2 col-span-2 bg-blue-200">
-            {news[4].headline}
+            {news[randomNewsTwo].headline}
             <br />
             <br />
-            {news[4].summary}
+            {news[randomNewsTwo].summary}
+            <br/>
+            <br/>
+            <a href={news[randomNewsTwo].url}>{news[randomNewsTwo].url}</a>
           </div>
           <div className="row-span-2 col-span-2 bg-blue-400">
-            {" "}
-            {news[5].headline}
+            {news[randomNewsThree].headline}
             <br />
             <br />
-            {news[5].summary}
+            {news[randomNewsThree].summary}
+            <br/>
+            <br/>
+            <a href={news[randomNewsThree].url}>{news[randomNewsThree].url}</a>
           </div>
           <div className="row-span-2 col-span-2 bg-blue-200">
-            {" "}
-            {news[6].headline}
+            {news[randomNewsFour].headline}
             <br />
             <br />
-            {news[6].summary}
+            {news[randomNewsFour].summary}
+            <br/>
+            <br/>
+            <a href={news[randomNewsFour].url}>{news[randomNewsFour].url}</a>
           </div>
           {/* {console.log(news)} */}
         </>
