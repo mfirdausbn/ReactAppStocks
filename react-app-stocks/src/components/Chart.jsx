@@ -95,8 +95,8 @@ const Chart = () => {
         <AreaChart data={data}>
           <defs>
             <linearGradient id="chartColor" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="rgb(19 210 254)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="rgb(19 210 254)" stopOpacity={0} />
+              <stop offset="5%" stopColor="rgb(19 20 284)" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="rgb(19 20 24)" stopOpacity={0} />
             </linearGradient>
           </defs>
           <Area

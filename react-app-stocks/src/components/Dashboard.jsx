@@ -8,6 +8,7 @@ import Overview from "./Overview";
 import StockContext from "../context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../api/stock-api";
 import Chart from "./Chart";
+import NavBar from "./NavBar";
 
 const Dashboard = () => {
   const ctx = useContext(StockContext);
@@ -43,10 +44,10 @@ const Dashboard = () => {
 
   return (
     //makes the page layout a grid of 2columns by 8 rows
-    <div className="h-screen grid grid-cols-2 grid-rows-8 gap-6 p-10 font-quicksand bg-slate-500">
-      <div className="row-span-1 col-span-2 ">
-        <Card>NAVBAR HERE</Card>
-      </div>
+    <div className="h-screen grid grid-cols-2 grid-rows-8 gap-6 p-10 font-quicksand bg-sky-500">
+      {/* <div className="row-span-1 col-span-2  ">
+        <NavBar/>
+      </div> */}
       <div className="row-span-2 col-span-1 ">
         <SearchArea name={stockDetails.name} />
       </div>
