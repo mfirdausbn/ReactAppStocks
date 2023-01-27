@@ -1,13 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
-
 import SearchArea from "../components/SearchArea";
 import Details from "../components/Details";
 import Overview from "../components/Overview";
-
 import StockContext from "../context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../api/api-functions";
 import Chart from "../components/Chart";
-import NavBar from "../components/NavBar";
 
 const HomePage = () => {
   const ctx = useContext(StockContext);
